@@ -1,0 +1,198 @@
+#map {
+  width: 100%;
+  height: 580px;
+  min-height: 400px;
+  max-height: 70vh;
+}
+.filter-container {
+  margin: 20px auto;
+  position: relative;
+  width: auto;
+  max-width: 900px;
+
+  border: 3px solid #000;
+  background-color: #fafafa;
+  padding: 15px;
+  box-shadow: 10px 10px 0 #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  transition:
+    transform 0.12s ease-out,
+    box-shadow 0.12s ease-out,
+    background-color 0.12s ease-out;
+}
+.filter-container:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 13px 13px 0 #000;
+  background-color: #ffffff;
+}
+.filter-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#filterContainer input {
+  padding: 5px;
+  border: 2px solid #000;
+  width: 100%;
+}
+
+#filterContainer button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: 2px solid #000;
+  background: #ddd;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#filterResults {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.legend {
+   backdrop-filter: blur(10px);  
+  -webkit-backdrop-filter: blur(10px); 
+  background: rgba(255, 255, 255, 0.3); 
+  border-radius: 58;
+  padding: 8px;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 6px;
+}
+
+.brutalist-card {
+  position: relative;
+  width: auto;
+  min-width: 220px;
+  max-width: 260px;
+
+  border: 3px solid #000;
+  background-color: #fdfdfd;
+  padding: 1.25rem 1.5rem;
+
+  box-shadow: 10px 10px 0 #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  transition:
+    transform 0.12s ease-out,
+    box-shadow 0.12s ease-out,
+    background-color 0.12s ease-out;
+}
+
+
+.brutalist-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 13px 13px 0 #000;
+  background-color: #ffffff;
+}
+
+.brutalist-card::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  background: #ffdd00;
+  border: 2px solid #000;
+}
+
+
+.brutalist-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.75rem;
+}
+
+
+.brutalist-card__alert {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  color: #000;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+.brutalist-card__value {
+  margin-top: 0.25rem;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #000;
+}
+
+/* Testo di supporto / descrizione */
+.brutalist-card__message {
+  margin-top: 0.5rem;
+  color: #111;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+/* Azioni in basso (se le usi) */
+.brutalist-card__actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Contenitore delle card */
+#cardsRow,
+.cards-row {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;        /* tutte e 4 sulla stessa riga */
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Se vuoi mantenere sempre una sola riga e permettere lo scroll su mobile */
+.cards-row {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+/* Scrollbar più discreta (browser compatibili) */
+.cards-row::-webkit-scrollbar {
+  height: 6px;
+}
+.cards-row::-webkit-scrollbar-track {
+  background: #e5e5e5;
+}
+.cards-row::-webkit-scrollbar-thumb {
+  background: #111;
+}
+
+/* Breakpoint per layout più morbido: se cambi idea e vuoi andare a capo sotto un certo width */
+@media (max-width: 900px) {
+  .cards-row {
+    max-width: 100%;
+  }
+}
