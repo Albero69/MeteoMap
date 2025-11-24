@@ -96,7 +96,6 @@ function buildPopupHtml(item) {
 
 function addMarkerToMap(item, tMin, tMax) {
   if (!item?.geopoint || item.geopoint.lat == null || item.geopoint.lon == null) return;
-  // usa getWeatherIcon che già converte
   const icon = getWeatherIcon(item, tMin, tMax);
   const marker = L.marker([item.geopoint.lat, item.geopoint.lon], { icon });
   marker.bindPopup(buildPopupHtml(item));
