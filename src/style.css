@@ -141,7 +141,7 @@
   color: #000;
 }
 
-/* Testo di supporto / descrizione */
+
 .brutalist-card__message {
   margin-top: 0.5rem;
   color: #111;
@@ -152,7 +152,7 @@
   font-weight: 600;
 }
 
-/* Azioni in basso (se le usi) */
+
 .brutalist-card__actions {
   margin-top: 0.75rem;
   display: flex;
@@ -160,26 +160,24 @@
   flex-wrap: wrap;
 }
 
-/* Contenitore delle card */
+
 #cardsRow,
 .cards-row {
   max-width: 1200px;
   margin: 2rem auto;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;        /* tutte e 4 sulla stessa riga */
+  flex-wrap: nowrap;        
   justify-content: center;
   gap: 1.5rem;
   padding: 0 1rem;
 }
 
-/* Se vuoi mantenere sempre una sola riga e permettere lo scroll su mobile */
 .cards-row {
   overflow-x: auto;
   scrollbar-width: thin;
 }
 
-/* Scrollbar più discreta (browser compatibili) */
 .cards-row::-webkit-scrollbar {
   height: 6px;
 }
@@ -190,7 +188,6 @@
   background: #111;
 }
 
-/* Breakpoint per layout più morbido: se cambi idea e vuoi andare a capo sotto un certo width */
 @media (max-width: 900px) {
   .cards-row {
     max-width: 100%;
