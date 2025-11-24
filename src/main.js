@@ -290,18 +290,14 @@ function renderFiltered(list) {
     }
   }
 
-  if (list.length === 0) {
-    document.getElementById("filterResults").innerText = "Risultati: 0";
-    return;
-  }
+
 
 
   for (const item of list) {
     addMarkerToMap(item, tMin, tMax);
   }
 
-  document.getElementById("filterResults").innerText =
-    `Risultati: ${list.length}`;
+
 }
 
 
